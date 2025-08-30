@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CivicLensa lens to see & highlight civic problems.-</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <div class="logo">CiViC~Lens</div>
+        <div class="other-navs">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="banner">
+        <h2 class="lines">
+          Be the voice of your city. Spot an issue, report it, and help to make
+          your community smarter, safer, and cleaner.” ✨
+        </h2>
+        <a href="http://localhost:3000/issues/new" class="cta-btn">🚀 Fix My City</a>
+      </div>
+      <div>
+        <div class="reported">
+          <h3>here are some of the issues reported by the citizens.</h3>
+          <div class="issues"></div>
+          <% for(let list of listofProb) { %>
+            <div class="issue">
+            <img src="<%=list.image%>" alt="">
+            <p class="prob-title"><%=list.title %></p>   
+            <p class="prob-location"><%=list.location %></p>
+            <p class="prob-status"><%=list.status %></p>
+              <% }%>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </main>
+    <footer>
+      <p>© 2025 CivicLens | Built with ❤️ for SIH Hackathon</p>
+    </footer>
+  </body>
+</html>
